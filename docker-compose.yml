@@ -1,0 +1,12 @@
+version: "2"
+services:
+  zproxy:
+    container_name: zproxy
+    image: "achilles85/zproxy-wine:latest"
+    volumes:
+    - /$HOME/Docker/zproxy:/opt/zproxy
+    network_mode: host
+    restart: always
+    stdin_open: true
+    tty: true
+    command: /opt/zproxy/start.sh
